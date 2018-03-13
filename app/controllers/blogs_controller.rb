@@ -2,7 +2,9 @@
 class BlogsController < ApplicationController
    include BlogsHelper
    def show
-      @user = User.includes(:blogs).first
+      for i in 1..5
+         @user = User.includes(:blogs).first
+      end
       Blog.blogByCategory('admin')
       render 'show'
    end
