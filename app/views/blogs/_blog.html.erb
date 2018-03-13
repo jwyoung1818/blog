@@ -20,7 +20,7 @@
             <tbody>
                 <% blog.comments.each do |comment| %>
                     <% @comment = comment %>
-                    <%= render partial: 'comment' %>
+                    <%= render partial: 'blogs/comment' %>
                 <% end %>
             </tbody>
         </table>
