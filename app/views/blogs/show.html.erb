@@ -1,0 +1,15 @@
+
+   <div id="main-container" class="container">
+      <p>There are <%= User.count%> users</p>
+      <div class="row">
+        <div id="sidebar" class="col-xs-2">
+          <!-- sidebar content -->
+            <br/>
+            <br/><br/>
+            <%= render 'user'%>
+        </div>
+        <div id="content" class="col-xs-10">
+            <%= render 'blog'%>
+            <%= render 'date'%>        
+      </div>
+    </div>
