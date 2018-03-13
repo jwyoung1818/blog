@@ -1,75 +1,80 @@
+Processing by BlogsController#show as HTML
+  Parameters: {"bid"=>"1", "id"=>"show"}
   Query Trace > /app/controllers/blogs_controller.rb:6:in `block in show'
      from /app/controllers/blogs_controller.rb:5:in `show'
-  User Load (1.6ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  User Load (1.1ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
   Query Trace > /app/controllers/blogs_controller.rb:6:in `block in show'
      from /app/controllers/blogs_controller.rb:5:in `show'
-  Blog Load (52.5ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" IN (1)
+  Blog Load (57.2ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" IN (1)
   Query Trace > /app/controllers/blogs_controller.rb:6:in `block in show'
      from /app/controllers/blogs_controller.rb:5:in `show'
-  CACHE (10.8ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  CACHE (0.9ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
   Query Trace > /app/controllers/blogs_controller.rb:6:in `block in show'
      from /app/controllers/blogs_controller.rb:5:in `show'
-  CACHE (1.7ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" IN (1)
+  CACHE (1.1ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" IN (1)
   Query Trace > /app/controllers/blogs_controller.rb:6:in `block in show'
      from /app/controllers/blogs_controller.rb:5:in `show'
-  CACHE (1.5ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  CACHE (1.0ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
   Query Trace > /app/controllers/blogs_controller.rb:6:in `block in show'
      from /app/controllers/blogs_controller.rb:5:in `show'
-  CACHE (1.7ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" IN (1)
+  CACHE (1.1ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" IN (1)
   Query Trace > /app/controllers/blogs_controller.rb:6:in `block in show'
      from /app/controllers/blogs_controller.rb:5:in `show'
-  CACHE (1.5ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  CACHE (0.9ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
   Query Trace > /app/controllers/blogs_controller.rb:6:in `block in show'
      from /app/controllers/blogs_controller.rb:5:in `show'
-  CACHE (1.9ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" IN (1)
+  CACHE (1.2ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" IN (1)
   Query Trace > /app/controllers/blogs_controller.rb:6:in `block in show'
      from /app/controllers/blogs_controller.rb:5:in `show'
-  CACHE (1.2ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  CACHE (0.9ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
   Query Trace > /app/controllers/blogs_controller.rb:6:in `block in show'
      from /app/controllers/blogs_controller.rb:5:in `show'
-  CACHE (1.8ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" IN (1)
+  CACHE (1.1ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" IN (1)
   Query Trace > /app/controllers/blogs_controller.rb:8:in `show'
-  User Load (1.7ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1
+  User Load (1.2ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1
   Query Trace > /app/controllers/blogs_controller.rb:8:in `show'
-  Blog Load (46.9ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" IN (2)
+  Blog Load (46.6ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" IN (2)
   Query Trace > /app/controllers/blogs_controller.rb:9:in `show'
-  User Load (1.4ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
+  User Load (1.2ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1 OFFSET 2
   Query Trace > /app/controllers/blogs_controller.rb:9:in `show'
-  Blog Load (46.9ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" IN (3)
+  Blog Load (46.6ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" IN (3)
   Query Trace > /app/models/blog.rb:15:in `block in extractBlogs'
      from /app/models/blog.rb:14:in `each'
      from /app/models/blog.rb:14:in `extractBlogs'
      from /app/models/blog.rb:9:in `blogByCategory'
      from /app/controllers/blogs_controller.rb:10:in `show'
-  Blog Load (1.8ms)  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Blog Load (1.2ms)  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
   Query Trace > /app/models/blog.rb:15:in `block in extractBlogs'
      from /app/models/blog.rb:14:in `each'
      from /app/models/blog.rb:14:in `extractBlogs'
      from /app/models/blog.rb:9:in `blogByCategory'
      from /app/controllers/blogs_controller.rb:10:in `show'
-  Blog Load (0.9ms)  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 2]]
+  Blog Load (1.0ms)  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 2]]
   Query Trace > /app/models/blog.rb:15:in `block in extractBlogs'
      from /app/models/blog.rb:14:in `each'
      from /app/models/blog.rb:14:in `extractBlogs'
      from /app/models/blog.rb:9:in `blogByCategory'
      from /app/controllers/blogs_controller.rb:10:in `show'
-  Blog Load (0.9ms)  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 3]]
+  Blog Load (1.0ms)  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 3]]
   Query Trace > /app/models/blog.rb:18:in `extractBlogs'
      from /app/models/blog.rb:9:in `blogByCategory'
      from /app/controllers/blogs_controller.rb:10:in `show'
-  Blog Load (278.4ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
-  Query Trace > /app/views/blogs/show.html.erb:3:in `_1af7b98ec3bfd84158f85e70ff29775d'
+  Blog Load (200.7ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+  Query Trace > /app/views/blogs/show.html.erb:3:in `_ac33a798a55626b67b96009a1bd65e7b'
      from /app/controllers/blogs_controller.rb:11:in `show'
-  CACHE (1.3ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
-  Query Trace > /app/views/blogs/show.html.erb:3:in `_1af7b98ec3bfd84158f85e70ff29775d'
+  CACHE (1.2ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  Query Trace > /app/views/blogs/show.html.erb:3:in `_ac33a798a55626b67b96009a1bd65e7b'
      from /app/controllers/blogs_controller.rb:11:in `show'
-   (47.8ms)  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."user_id" = ? AND "blogs"."category" = ?  [["user_id", 1], ["category", "admin"]]
-  Query Trace > /app/views/blogs/_user.html.erb:3:in `_aecb9f3ccf664c3922586fdd2abd562c'
-     from /app/views/blogs/show.html.erb:9:in `_1af7b98ec3bfd84158f85e70ff29775d'
+   (46.0ms)  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."user_id" = ? AND "blogs"."category" = ?  [["user_id", 1], ["category", "admin"]]
+  Query Trace > /app/views/blogs/_user.html.erb:3:in `_66c64f10f5009b3f3efb781e09b0eff2'
+     from /app/views/blogs/show.html.erb:9:in `_ac33a798a55626b67b96009a1bd65e7b'
      from /app/controllers/blogs_controller.rb:11:in `show'
-  User Load (1.6ms)  SELECT  "users".* FROM "users" LIMIT 2
-  Rendered blogs/_user.html.erb (3.6ms)
-  Query Trace > /app/views/blogs/_blog.html.erb:3:in `_9386accc5b539a792704d57894e45f41'
-     from /app/views/blogs/show.html.erb:12:in `_1af7b98ec3bfd84158f85e70ff29775d'
+  User Load (1.4ms)  SELECT  "users".* FROM "users" LIMIT 2
+  Rendered blogs/_user.html.erb (3.3ms)
+  Query Trace > /app/views/blogs/_blog.html.erb:3:in `_36d1f976e91782a29fe2751d1f7064ce'
+     from /app/views/blogs/show.html.erb:12:in `_ac33a798a55626b67b96009a1bd65e7b'
      from /app/controllers/blogs_controller.rb:11:in `show'
-  Blog Load (1.4ms)  SELECT  "blogs".* FROM "blogs" LIMIT 4
+  Blog Load (1.6ms)  SELECT  "blogs".* FROM "blogs" LIMIT 4
+  Rendered blogs/_blog.html.erb (3.6ms)
+  Rendered blogs/_date.html.erb (0.6ms)
+  Rendered blogs/show.html.erb within layouts/application (68.8ms)
