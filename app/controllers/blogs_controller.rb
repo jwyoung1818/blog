@@ -1,8 +1,9 @@
+
 class BlogsController < ApplicationController
+   include BlogsHelper
    def show
-      for i in 1..8
-        @blog = Blog.retrieve(params[:bid])
-      end
+      @user = User.includes(:blogs).first
+      Blog.blogByCategory('admin')
       render 'show'
    end
 end

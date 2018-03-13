@@ -15,6 +15,16 @@
     <strong>Text:</strong>
     <%= blog.text %>
     </p>
+    <div class='comments'>
+        <table class="table table-striped">
+            <tbody>
+                <% blog.comments.each do |comment| %>
+                    <% @comment = comment %>
+                    <%= render 'comment' %>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
 </div>
 <% end %>
 </div>

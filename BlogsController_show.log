@@ -1,0 +1,87 @@
+  Query Trace > /app/controllers/blogs_controller.rb:5:in `show'
+  User Load (1.1ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  Query Trace > /app/controllers/blogs_controller.rb:5:in `show'
+  Blog Load (47.7ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."user_id" IN (1)
+  Query Trace > /app/models/blog.rb:15:in `block in extractBlogs'
+     from /app/models/blog.rb:14:in `each'
+     from /app/models/blog.rb:14:in `extractBlogs'
+     from /app/models/blog.rb:9:in `blogByCategory'
+     from /app/controllers/blogs_controller.rb:6:in `show'
+  Blog Load (1.2ms)  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > /app/models/blog.rb:15:in `block in extractBlogs'
+     from /app/models/blog.rb:14:in `each'
+     from /app/models/blog.rb:14:in `extractBlogs'
+     from /app/models/blog.rb:9:in `blogByCategory'
+     from /app/controllers/blogs_controller.rb:6:in `show'
+  Blog Load (0.9ms)  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 2]]
+  Query Trace > /app/models/blog.rb:15:in `block in extractBlogs'
+     from /app/models/blog.rb:14:in `each'
+     from /app/models/blog.rb:14:in `extractBlogs'
+     from /app/models/blog.rb:9:in `blogByCategory'
+     from /app/controllers/blogs_controller.rb:6:in `show'
+  Blog Load (1.0ms)  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 3]]
+  Query Trace > /app/models/blog.rb:18:in `extractBlogs'
+     from /app/models/blog.rb:9:in `blogByCategory'
+     from /app/controllers/blogs_controller.rb:6:in `show'
+  Blog Load (192.1ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+  Query Trace > /app/views/blogs/show.html.erb:3:in `_a56dd81586e50ab354a52a3023a3fe24'
+     from /app/controllers/blogs_controller.rb:7:in `show'
+  CACHE (15.7ms)  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  Query Trace > /app/views/blogs/show.html.erb:3:in `_a56dd81586e50ab354a52a3023a3fe24'
+     from /app/controllers/blogs_controller.rb:7:in `show'
+   (44.2ms)  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."user_id" = ? AND "blogs"."category" = ?  [["user_id", 1], ["category", "admin"]]
+  Query Trace > /app/views/blogs/_user.html.erb:3:in `_48c0d5346a54e3016554db9a9124cb4e'
+     from /app/views/blogs/show.html.erb:9:in `_a56dd81586e50ab354a52a3023a3fe24'
+     from /app/controllers/blogs_controller.rb:7:in `show'
+  User Load (1.5ms)  SELECT  "users".* FROM "users" LIMIT 2
+  Rendered blogs/_user.html.erb (3.3ms)
+  Query Trace > /app/views/blogs/_blog.html.erb:3:in `_ad1d976ae8b6ca6c7d79082b2a7d643d'
+     from /app/views/blogs/show.html.erb:12:in `_a56dd81586e50ab354a52a3023a3fe24'
+     from /app/controllers/blogs_controller.rb:7:in `show'
+  Blog Load (1.3ms)  SELECT  "blogs".* FROM "blogs" LIMIT 4
+  Query Trace > /app/views/blogs/_blog.html.erb:21:in `block in _ad1d976ae8b6ca6c7d79082b2a7d643d'
+     from /app/views/blogs/_blog.html.erb:3:in `_ad1d976ae8b6ca6c7d79082b2a7d643d'
+     from /app/views/blogs/show.html.erb:12:in `_a56dd81586e50ab354a52a3023a3fe24'
+     from /app/controllers/blogs_controller.rb:7:in `show'
+  Comment Load (61.3ms)  SELECT "comments".* FROM "comments" WHERE "comments"."blog_id" = ?  [["blog_id", 1]]
+  Rendered blogs/_comment.html.erb (0.4ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Query Trace > /app/views/blogs/_blog.html.erb:21:in `block in _ad1d976ae8b6ca6c7d79082b2a7d643d'
+     from /app/views/blogs/_blog.html.erb:3:in `_ad1d976ae8b6ca6c7d79082b2a7d643d'
+     from /app/views/blogs/show.html.erb:12:in `_a56dd81586e50ab354a52a3023a3fe24'
+     from /app/controllers/blogs_controller.rb:7:in `show'
+  Comment Load (60.9ms)  SELECT "comments".* FROM "comments" WHERE "comments"."blog_id" = ?  [["blog_id", 2]]
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Query Trace > /app/views/blogs/_blog.html.erb:21:in `block in _ad1d976ae8b6ca6c7d79082b2a7d643d'
+     from /app/views/blogs/_blog.html.erb:3:in `_ad1d976ae8b6ca6c7d79082b2a7d643d'
+     from /app/views/blogs/show.html.erb:12:in `_a56dd81586e50ab354a52a3023a3fe24'
+     from /app/controllers/blogs_controller.rb:7:in `show'
+  Comment Load (61.8ms)  SELECT "comments".* FROM "comments" WHERE "comments"."blog_id" = ?  [["blog_id", 3]]
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Query Trace > /app/views/blogs/_blog.html.erb:21:in `block in _ad1d976ae8b6ca6c7d79082b2a7d643d'
+     from /app/views/blogs/_blog.html.erb:3:in `_ad1d976ae8b6ca6c7d79082b2a7d643d'
+     from /app/views/blogs/show.html.erb:12:in `_a56dd81586e50ab354a52a3023a3fe24'
+     from /app/controllers/blogs_controller.rb:7:in `show'
+  Comment Load (62.3ms)  SELECT "comments".* FROM "comments" WHERE "comments"."blog_id" = ?  [["blog_id", 4]]
+  Rendered blogs/_comment.html.erb (0.2ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Rendered blogs/_comment.html.erb (0.1ms)
+  Rendered blogs/_blog.html.erb (279.6ms)
+  Rendered blogs/_date.html.erb (0.7ms)
+  Rendered blogs/show.html.erb within layouts/application (356.9ms)
+0
+Completed 200 OK in 1349ms (Views: 301.1ms | ActiveRecord: 554.7ms)

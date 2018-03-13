@@ -1,6 +1,6 @@
 
    <div id="main-container" class="container">
-      <p>There are <%= User.count%> users</p>
+      <p align='right'>There are <%= User.first.blogs.where(category: 'admin').count %> users</p>
       <div class="row">
         <div id="sidebar" class="col-xs-2">
           <!-- sidebar content -->
