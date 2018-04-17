@@ -1,6 +1,9 @@
-<div>
+<div id="blogs">
 <h3>Blogs</h3>
-<% @blogs[0..4].each do |blog| %>
+<table class = 'table table-stripped'>
+     <tbody>
+<% @blogs.each do |blog| %>
+<tr> <td>
 <div class="card">
     <p>
     <strong>Title:</strong>
@@ -16,5 +19,10 @@
     <%= blog.text %>
     </p>
 </div>
+</td> </tr>
 <% end %>
+ </tbody>
+</table>
 </div>
+
+<%= will_paginate @blogs %>

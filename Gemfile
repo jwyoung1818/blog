@@ -47,7 +47,7 @@ group :development do
   
   gem 'active_record_query_trace'
 end
-
+gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'railties'
