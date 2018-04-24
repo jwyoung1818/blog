@@ -1,14 +1,14 @@
 
    <div id="main-container" class="container">
-      <p align='right'>There are <%= User.first.blogs.where(category: 'admin').count %> users</p>
+      <p align='right'>
+      <span id='blog-num' align='right'>There are <%= link_to Blog.where(category: 'admin').count %> blogs</span>
+      <span id='user-num' align='right'>There are <%= link_to User.count %> users </span>
+      </p>
       <div class="row">
-        <div id="sidebar" class="col-xs-2">
-          <!-- sidebar content -->
-            <br/>
-            <br/><br/>
+        <div id="sidebar" class="col-xs-3">
             <%= render partial: 'user'%>
         </div>
-        <div id="content" class="col-xs-10">
+        <div id="content" class="col-xs-9">
             <%= render partial: 'blogs/blog'%>
             <%= render partial: 'blogs/date'%>        
         <%= link_to 'test' %>
