@@ -4,10 +4,13 @@ class BlogsController < ApplicationController
    def index
       Rails.logger.debug "----Out #{params}"
       render :nothing => true
+      count = User.first.blogs.first.count
+      count2 = User.first.blogs.first.count
    end
    def show
       for i in 1..5
          @users = User.limit(5)
+         link_to i
       end
       @blogs = Blog.paginate(:page => params[:page], :per_page => 5)
       render 'show'
