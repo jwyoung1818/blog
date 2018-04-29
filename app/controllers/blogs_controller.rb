@@ -5,9 +5,9 @@ class BlogsController < ApplicationController
       Rails.logger.debug "----Out #{params}"
       render :nothing => true
       [1].each do
-  	user = User.first
-	user.blogs.size
-	user.blogs.count      
+        	user = User.first
+      	user.blogs.size
+      	user.blogs.count      
       end
    end
    def show
@@ -18,6 +18,7 @@ class BlogsController < ApplicationController
       @blogs = Blog.paginate(:page => params[:page], :per_page => 5)
       blog = Blog.first
       blog.id
+      Blog.find(blog.id, blog.created_at)
       blog.reload
       render 'show'
       blog.reload
