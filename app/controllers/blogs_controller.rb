@@ -7,14 +7,14 @@ class BlogsController < ApplicationController
       [1].each do
         	user = User.first
       	user.blogs.size
-      	user.blogs.count      
+      	user.blogs.count
       end
    end
    def show
       for i in 1..5
          @users = User.limit(5)
          link_to i
-      end
+      end      
       @blogs = Blog.paginate(:page => params[:page], :per_page => 5)
       blog = Blog.first
       blog.id
