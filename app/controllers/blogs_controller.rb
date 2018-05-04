@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
    include BlogsHelper
+   include ActionView::Helpers::UrlHelper
    respond_to :js, :json, :html
    def index
       Rails.logger.debug "----Out #{params}"
@@ -11,17 +12,23 @@ class BlogsController < ApplicationController
       end
    end
    def show
+      size = 5
+      @users = nil
       for i in 1..5
-         @users = User.limit(5)
-         link_to i
+         @users = User.limit(size)
+         @users = User.limit(size)
+         link_to 'test', 'blogs/show'
       end      
-      @blogs = Blog.paginate(:page => params[:page], :per_page => 5)
-      blog = Blog.first
-      blog.id
-      Blog.find(blog.id, blog.created_at)
-      blog.reload
+      a = 5
+      if a == 5
+         @blogs = Blog.paginate(:page => params[:page], :per_page => 5) 
+      end         
+      b = Blog.first 
+      b.id
+      Blog.find(b.id)
+      b.reload
       render 'show'
-      blog.reload
+      b.reload
    end
 end
 
