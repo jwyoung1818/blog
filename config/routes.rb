@@ -57,6 +57,6 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   root 'welcome#index'
-  mount Ipd::Engine => "/ipd"
+  #mount Ipd::Engine => "/ipd"
 
 end
