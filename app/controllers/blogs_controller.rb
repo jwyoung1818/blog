@@ -5,8 +5,8 @@ class BlogsController < ApplicationController
    def index
       Rails.logger.debug "----Out #{params}"
       render :nothing => true
-      [1].each do
-        	user = User.first
+      [1, 2].each do
+        user = User.first
       	user.blogs.size
       	user.blogs.count
       end
