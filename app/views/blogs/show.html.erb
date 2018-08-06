@@ -1,10 +1,10 @@
 
    <div id="main-container" class="container">
-      <p align='right'>
+      <p id='insert32' align='right'>
       <span id='blog-num' align='right'>There are <%= link_to Blog.where(category: 'admin').count %> blogs</span>
       <span id='user-num' align='right'>There are <%= link_to User.count %> users </span>
       </p>
-      <div class="row">
+      <div id='insert33' class="row">
         <div id="sidebar" class="col-xs-3">
             <%= render partial: 'user'%>
         </div>

@@ -46,6 +46,8 @@ group :development do
   gem 'spring'
   
   gem 'active_record_query_trace'
+
+  gem 'guard-livereload', '~> 2.5', require: false
 end
 gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap-sass', '~> 3.2.0'
@@ -53,3 +55,5 @@ gem 'autoprefixer-rails'
 gem 'railties'
 gem "deface", "~> 1.0"
 gem 'responders', '~> 2.0' 
+gem 'render_async', '~> 1.2.0'
+gem 'react-rails-hot-loader'

@@ -1,22 +1,37 @@
-  Query Trace > /app/models/blog.rb:15:in `block in extractBlogs'
-     from /app/models/blog.rb:14:in `each'
-     from /app/models/blog.rb:14:in `extractBlogs'
-     from /app/models/blog.rb:9:in `blogByCategory'
-     from /app/controllers/blogs_controller.rb:8:in `show'
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  Blog Load (5.0ms)  SELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  Blog Load (2.4ms)  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  Blog Load (2.2ms)  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_4f1682ec4b6a057e36ab8e90d5b276db'
+     from app/controllers/blogs_controller.rb:44:in `show'
+   (58.9ms)  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_4f1682ec4b6a057e36ab8e90d5b276db'
+     from app/controllers/blogs_controller.rb:44:in `show'
+   (2.7ms)  SELECT COUNT(*) FROM "users"
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_1ff167683f47954982aba8cd51d7d4b1'
+     from app/views/blogs/show.html.erb:9:in `_4f1682ec4b6a057e36ab8e90d5b276db'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  User Load (18.1ms)  SELECT "users".* FROM "users"
+  Query Trace > app/views/blogs/_user.html.erb:13:in `_1ff167683f47954982aba8cd51d7d4b1'
+     from app/views/blogs/show.html.erb:9:in `_4f1682ec4b6a057e36ab8e90d5b276db'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  CACHE (1.6ms)  SELECT "users".* FROM "users"
+  Rendered blogs/_user.html.erb (516.6ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_073fa86b1741093b2948e7837c3fb896'
+     from app/views/blogs/show.html.erb:12:in `_4f1682ec4b6a057e36ab8e90d5b276db'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  Blog Load (2.3ms)  SELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_073fa86b1741093b2948e7837c3fb896'
+     from app/views/blogs/show.html.erb:12:in `_4f1682ec4b6a057e36ab8e90d5b276db'
+     from app/controllers/blogs_controller.rb:44:in `show'
+   (37.0ms)  SELECT COUNT(*) FROM "blogs"
+  Rendered blogs/_blog.html.erb (52.2ms)
+  Rendered blogs/_date.html.erb (0.5ms)
+  Rendered blogs/show.html.erb within layouts/application (652.0ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
   Blog Load (1.2ms)  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
-  Query Trace > /app/models/blog.rb:15:in `block in extractBlogs'
-     from /app/models/blog.rb:14:in `each'
-     from /app/models/blog.rb:14:in `extractBlogs'
-     from /app/models/blog.rb:9:in `blogByCategory'
-     from /app/controllers/blogs_controller.rb:8:in `show'
-  Blog Load (1.0ms)  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 2]]
-  Query Trace > /app/models/blog.rb:15:in `block in extractBlogs'
-     from /app/models/blog.rb:14:in `each'
-     from /app/models/blog.rb:14:in `extractBlogs'
-     from /app/models/blog.rb:9:in `blogByCategory'
-     from /app/controllers/blogs_controller.rb:8:in `show'
-  Blog Load (1.1ms)  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 3]]
-  Query Trace > /app/models/blog.rb:18:in `extractBlogs'
-     from /app/models/blog.rb:9:in `blogByCategory'
-     from /app/controllers/blogs_controller.rb:8:in `show'
-  Blog Load (188.5ms)  SELECT "blogs".* FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+Completed 200 OK in 812ms (Views: 636.7ms | ActiveRecord: 131.3ms

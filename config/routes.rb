@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   get 'welcome/index'
-  get 'blogs/index' => 'blogs#index'
+  # resources :blogs do 
+
+  # end
+  get 'blogs/index' => 'blogs#index' 
+  post 'requests/request_handle' => 'requests#request_handle'
+  #get 'blogs/count_stats' => 'blogs#count_stats'
+  get :count_stats, :controller => :blogs
+  #get :show, :controller => :blogs
   resources :blogs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
