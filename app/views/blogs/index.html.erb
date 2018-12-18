@@ -1,10 +1,41 @@
 
-
- <div id="main-container" class="container">
-  
-        <div id="content" class="col-xs-9">
-            <p id='insert24'> count 1: <%= @count %> </p>
-            <p id='insert25'> count2 <%= render_async count_stats_path %> </p>
-			<p id='insert26'> user_id <%=  @user.id %> </p>
+   <div id="main-container" class="container">
+      <p id='insert0' >
+      <span id='blog-num' align='right'>There are <%= Blog.where(category: 'admin').count %> blogs</span>
+      <span id='user-num' align='right'>There are <%= User.count %> users </span>
+      </p>
+      <div id='insert1'  class="row">
+        <div id="sidebar" class="col-xs-3">
+            <div id="users">
+			<h3 id='insert2' >Users</h3>
+			<% @users.each do |user| %>
+			    <p id='insert3' ><strong id='insert4' > Name:</strong>  <%= user.name%></p>
+			<% end %>
+			</div>
         </div>
-</div>
+        <div id="content" class="col-xs-9">
+		<div id="blogs">
+			<h3 id='insert5' >Blogs</h3>
+			<table id='insert6' >
+		    <tbody id='insert7' >
+				<% @blogs.each do |blog| %>
+					<tr id='insert8' > 
+					<td id='insert9' >
+						<div id='insert10'  class="card">
+					    <p id='insert11' >
+					    <strong id='insert12' >Text:</strong>
+					    <%= blog.text %>
+					    </p>
+						</div>
+					</td> 
+				</tr>
+			<% end %>
+		</tbody>
+		</table>
+		<%= will_paginate @blogs %>
+		</div>
+        </div>
+    </div>
+
+
+

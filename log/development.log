@@ -4411,3 +4411,148 @@ Completed 200 OK in 602ms (Views: 405.5ms | ActiveRecord: 87.3ms)
 
 
 Started GET "/assets/interactive.self-b31a7d57b904565ee22e9e6f1927ec2e49715897638d1504da240faac8029abe.js?body=1" for 127.0.0.1 at 2018-12-18 00:02:55 -0600
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+[HotLoader] started WS server (ws://0.0.0.0:8082)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-18 10:59:53 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (uninitialized constant ApplicationController::ApplicationHelper):
+  app/controllers/application_controller.rb:6:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/welcome_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.7ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.8ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (118.4ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2@global/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2@global/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2@global/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2@global/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2@global/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (86.0ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2@global/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2@global/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2@global/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (187.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-18 11:00:19 -0600
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (0.4ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-18 11:00:23 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (0.0ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/index" for 127.0.0.1 at 2018-12-18 11:00:33 -0600
+Processing by BlogsController#index as HTML
+  Query Trace > app/controllers/blogs_controller.rb:6:in `index'
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  Query Trace > app/controllers/blogs_controller.rb:7:in `index'
+  [1m[36m (62.3ms)[0m  [1mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."user_id" = ?[0m  [["user_id", 1]]
+  Query Trace > app/views/blogs/index.html.erb:4:in `_app_views_blogs_index_html_erb___3672646598777082550_70147261091420'
+  [1m[35m (33.3ms)[0m  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+  Query Trace > app/views/blogs/index.html.erb:5:in `_app_views_blogs_index_html_erb___3672646598777082550_70147261091420'
+  [1m[36m (4.7ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Query Trace > app/views/blogs/index.html.erb:11:in `_app_views_blogs_index_html_erb___3672646598777082550_70147261091420'
+  [1m[35mUser Load (8.5ms)[0m  SELECT "users".* FROM "users"
+  Query Trace > app/views/blogs/index.html.erb:21:in `_app_views_blogs_index_html_erb___3672646598777082550_70147261091420'
+  [1m[36mBlog Load (2.9ms)[0m  [1mSELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0[0m
+  Query Trace > app/views/blogs/index.html.erb:21:in `_app_views_blogs_index_html_erb___3672646598777082550_70147261091420'
+  [1m[35m (29.1ms)[0m  SELECT COUNT(*) FROM "blogs"
+  Rendered blogs/index.html.erb within layouts/application (152.3ms)
+Completed 200 OK in 6001ms (Views: 5807.0ms | ActiveRecord: 144.3ms)
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-12-18 11:00:39 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2018-12-18 11:00:39 -0600
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2018-12-18 11:00:39 -0600
+
+
+Started GET "/blogs/index" for 127.0.0.1 at 2018-12-18 11:01:24 -0600
+Processing by BlogsController#index as HTML
+  Query Trace > app/controllers/blogs_controller.rb:6:in `index'
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Query Trace > app/controllers/blogs_controller.rb:7:in `index'
+  [1m[35m (31.0ms)[0m  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."user_id" = ?  [["user_id", 1]]
+  Query Trace > app/views/blogs/index.html.erb:4:in `_app_views_blogs_index_html_erb___3672646598777082550_70147333704080'
+  [1m[36m (26.4ms)[0m  [1mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?[0m  [["category", "admin"]]
+  Query Trace > app/views/blogs/index.html.erb:5:in `_app_views_blogs_index_html_erb___3672646598777082550_70147333704080'
+  [1m[35m (1.9ms)[0m  SELECT COUNT(*) FROM "users"
+  Query Trace > app/views/blogs/index.html.erb:11:in `_app_views_blogs_index_html_erb___3672646598777082550_70147333704080'
+  [1m[36mUser Load (17.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Query Trace > app/views/blogs/index.html.erb:21:in `_app_views_blogs_index_html_erb___3672646598777082550_70147333704080'
+  [1m[35mBlog Load (1.1ms)[0m  SELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0
+  Query Trace > app/views/blogs/index.html.erb:21:in `_app_views_blogs_index_html_erb___3672646598777082550_70147333704080'
+  [1m[36m (22.4ms)[0m  [1mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (109.8ms)
+Completed 200 OK in 213ms (Views: 108.5ms | ActiveRecord: 101.6ms)
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-18 11:04:24 -0600
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb__21789739693420005_70147348419960'
+  [1m[35m (28.9ms)[0m  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb__21789739693420005_70147348419960'
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered blogs/_user.html.erb (5.1ms)
+  Rendered blogs/show.html.erb within layouts/application (40.6ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 30.5ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <div id="users">
+    2: <h3 id='insert15'>Users</h3>
+    3: <% @users.each do |user| %>
+    4:     <p id='insert16'><strong id='insert17'> Name:</strong>  <%= user.name%></p>
+    5:     <p id='insert18'><strong id='insert19'> Nickname:</strong> <%= user.nickname%></p>
+    6:     <p id='insert20'><strong id='insert21'> Address:</strong> <%= user.address%></p>
+  app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__1609385097026765775_70147356700480'
+  app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb__21789739693420005_70147348419960'
+
+
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.2ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2@global/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2@global/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2@global/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2@global/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2@global/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.3ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2@global/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2@global/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/jwy/.rvm/gems/ruby-2.4.2@global/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (165.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-18 11:08:33 -0600
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+Processing by BlogsController#index as HTML
+  Query Trace > app/controllers/blogs_controller.rb:6:in `index'
+  [1m[35mUser Load (2.6ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  Query Trace > app/controllers/blogs_controller.rb:7:in `index'
+  [1m[36m (38.5ms)[0m  [1mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."user_id" = ?[0m  [["user_id", 1]]
+  Query Trace > app/views/blogs/index.html.erb:4:in `_app_views_blogs_index_html_erb___3672646598777082550_70147333704080'
+  [1m[35m (40.7ms)[0m  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+  Query Trace > app/views/blogs/index.html.erb:5:in `_app_views_blogs_index_html_erb___3672646598777082550_70147333704080'
+  [1m[36m (2.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Query Trace > app/views/blogs/index.html.erb:11:in `_app_views_blogs_index_html_erb___3672646598777082550_70147333704080'
+  [1m[35mUser Load (17.9ms)[0m  SELECT "users".* FROM "users"
+  Query Trace > app/views/blogs/index.html.erb:21:in `_app_views_blogs_index_html_erb___3672646598777082550_70147333704080'
+  [1m[36mBlog Load (1.7ms)[0m  [1mSELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0[0m
+  Query Trace > app/views/blogs/index.html.erb:21:in `_app_views_blogs_index_html_erb___3672646598777082550_70147333704080'
+  [1m[35m (27.6ms)[0m  SELECT COUNT(*) FROM "blogs"
+  Rendered blogs/index.html.erb within layouts/application (139.2ms)
+Completed 200 OK in 305ms (Views: 142.7ms | ActiveRecord: 132.8ms)
