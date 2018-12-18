@@ -3486,3 +3486,928 @@ Completed 200 OK in 491ms (Views: 363.4ms | ActiveRecord: 102.0ms)
 
 Started GET "/assets/interactive.self-b7a97bbcf76b05dca3da27d773fe2054e439e90e4e8126d53f129144c17ed27b.js?body=1" for 127.0.0.1 at 2018-08-02 20:32:55 -0500
 [HotLoader] starting WS server (ws://0.0.0.0:8082)
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+[HotLoader] started WS server (ws://0.0.0.0:8082)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 22:14:24 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (1.6ms)
+Completed 200 OK in 19ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 22:15:05 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-17 22:15:11 -0600
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs" for 127.0.0.1 at 2018-12-17 22:15:15 -0600
+Processing by BlogsController#index as HTML
+  Query Trace > app/controllers/blogs_controller.rb:7:in `index'
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  Query Trace > app/controllers/blogs_controller.rb:8:in `index'
+  [1m[36m (53.1ms)[0m  [1mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."user_id" = ?[0m  [["user_id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:9:in `index'
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:10:in `index'
+  [1m[36m (7.9ms)[0m  [1mSELECT "users"."id" FROM "users"[0m
+  Query Trace > app/controllers/blogs_controller.rb:11:in `index'
+  [1m[35mUser Exists (0.8ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:12:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:16:in `index'
+  [1m[35mCACHE (0.6ms)[0m  SELECT "users"."id" FROM "users"
+  Rendered /Users/jwy/.rvm/rubies/ruby-2.4.2/lib/ruby/gems/2.4.0/gems/render_async-1.2.0/app/views/render_async/_request.js.erb (0.5ms)
+  Rendered /Users/jwy/.rvm/rubies/ruby-2.4.2/lib/ruby/gems/2.4.0/gems/render_async-1.2.0/app/views/render_async/_render_async.html.erb (4.7ms)
+  Rendered blogs/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 5140ms (Views: 5012.6ms | ActiveRecord: 66.5ms)
+
+
+Started GET "/assets/blogs.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/blogs.self-4d3c95545c98e13cc0cde7e4434ad7e3c5ead6c02014b2e21c4410b9f03a2bbb.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/application.self-2d3c941fbe6689e808ff27d3db720a1535ce26cd5dd6075acc462b4ccd0eeca8.css?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/interactive.self-9ac92b8ea11fa53bdd33f8fc69592c8151f8ed32da9560013f788b09fdce0d83.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/test.self-787e0e7d5fe4109497992e44fa58db6ac8bbc12b2a0492b9ff4aa27541102fc2.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2018-12-17 22:15:20 -0600
+
+
+Started GET "/count_stats" for 127.0.0.1 at 2018-12-17 22:15:21 -0600
+Processing by BlogsController#count_stats as */*
+  Query Trace > app/controllers/blogs_controller.rb:26:in `count_stats'
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1[0m
+  Query Trace > app/controllers/blogs_controller.rb:26:in `count_stats'
+  [1m[35m (51.5ms)[0m  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."user_id" = ?  [["user_id", 2]]
+  Query Trace > app/controllers/blogs_controller.rb:28:in `block in count_stats'
+     from app/controllers/blogs_controller.rb:27:in `times'
+     from app/controllers/blogs_controller.rb:27:in `each'
+     from app/controllers/blogs_controller.rb:27:in `count_stats'
+  [1m[36mCACHE (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1 OFFSET 1[0m
+  Query Trace > app/controllers/blogs_controller.rb:28:in `block in count_stats'
+     from app/controllers/blogs_controller.rb:27:in `times'
+     from app/controllers/blogs_controller.rb:27:in `each'
+     from app/controllers/blogs_controller.rb:27:in `count_stats'
+  [1m[35mCACHE (1.8ms)[0m  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."user_id" = ?  [["user_id", 2]]
+  Rendered blogs/_count2.html.erb (0.7ms)
+Completed 200 OK in 91ms (Views: 30.1ms | ActiveRecord: 56.0ms)
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:15:47 -0600
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[36mBlog Load (1.7ms)[0m  [1mSELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1[0m
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[35mBlog Load (1.8ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[36mBlog Load (1.5ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (39.1ms)[0m  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (3.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mUser Load (14.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered blogs/_user.html.erb (210.0ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mBlog Load (1.7ms)[0m  [1mSELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0[0m
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (21.8ms)[0m  SELECT COUNT(*) FROM "blogs"
+  Rendered blogs/_blog.html.erb (34.2ms)
+  Rendered blogs/_date.html.erb (0.4ms)
+  Rendered blogs/show.html.erb within layouts/application (305.6ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[36mBlog Load (1.2ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 371ms (Views: 272.5ms | ActiveRecord: 86.8ms)
+
+
+Started POST "/requests/request_handle" for 127.0.0.1 at 2018-12-17 22:15:59 -0600
+Processing by RequestsController#request_handle as */*
+  Parameters: {"data_value"=>"div#users___paginate"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/requests/request_handle" for 127.0.0.1 at 2018-12-17 22:19:25 -0600
+Processing by RequestsController#request_handle as */*
+  Parameters: {"data_value"=>"div#users___paginate"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/requests/request_handle" for 127.0.0.1 at 2018-12-17 22:19:36 -0600
+Processing by RequestsController#request_handle as */*
+  Parameters: {"data_value"=>"div#users___paginate"}
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:19:46 -0600
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[35mBlog Load (1.1ms)[0m  SELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[36mBlog Load (0.9ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[35mBlog Load (1.4ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (32.1ms)[0m  [1mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?[0m  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "users"
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mUser Load (6.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered blogs/_user.html.erb (165.2ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mBlog Load (1.9ms)[0m  SELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (21.1ms)[0m  [1mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/_blog.html.erb (26.4ms)
+  Rendered blogs/_date.html.erb (0.1ms)
+  Rendered blogs/show.html.erb within layouts/application (231.2ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[35mBlog Load (0.9ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 295ms (Views: 225.2ms | ActiveRecord: 67.6ms)
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:19:58 -0600
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[36mBlog Load (0.9ms)[0m  [1mSELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1[0m
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[35mBlog Load (0.8ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[36mBlog Load (0.9ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (27.3ms)[0m  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (1.3ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mUser Load (6.9ms)[0m  SELECT "users".* FROM "users"
+  Rendered blogs/_user.html.erb (178.5ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mBlog Load (1.1ms)[0m  [1mSELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0[0m
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (20.3ms)[0m  SELECT COUNT(*) FROM "blogs"
+  Rendered blogs/_blog.html.erb (24.1ms)
+  Rendered blogs/_date.html.erb (0.1ms)
+  Rendered blogs/show.html.erb within layouts/application (236.9ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[36mBlog Load (0.9ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 288ms (Views: 226.1ms | ActiveRecord: 60.4ms)
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:22:00 -0600
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[35mBlog Load (1.0ms)[0m  SELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[36mBlog Load (0.8ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[35mBlog Load (0.8ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (28.3ms)[0m  [1mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?[0m  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "users"
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mUser Load (7.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered blogs/_user.html.erb (188.6ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mBlog Load (1.3ms)[0m  SELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (20.3ms)[0m  [1mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/_blog.html.erb (24.6ms)
+  Rendered blogs/_date.html.erb (0.1ms)
+  Rendered blogs/show.html.erb within layouts/application (248.9ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[35mBlog Load (1.2ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 393ms (Views: 319.7ms | ActiveRecord: 63.7ms)
+
+
+Started GET "/assets/interactive.self-e82a31d5b025f7108111dd87ed2d150d4ca481939023ccbe24f0595a3f177538.js?body=1" for 127.0.0.1 at 2018-12-17 22:22:00 -0600
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:26:33 -0600
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[36mBlog Load (1.4ms)[0m  [1mSELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1[0m
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[35mBlog Load (1.7ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[36mBlog Load (1.8ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (28.9ms)[0m  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mUser Load (14.9ms)[0m  SELECT "users".* FROM "users"
+  Rendered blogs/_user.html.erb (200.8ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mBlog Load (1.2ms)[0m  [1mSELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0[0m
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (20.3ms)[0m  SELECT COUNT(*) FROM "blogs"
+  Rendered blogs/_blog.html.erb (24.4ms)
+  Rendered blogs/_date.html.erb (0.2ms)
+  Rendered blogs/show.html.erb within layouts/application (266.6ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[36mBlog Load (1.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 420ms (Views: 328.5ms | ActiveRecord: 74.5ms)
+
+
+Started GET "/assets/interactive.self-ce6f888e0b58bb67aa51cebdb2438094a5e2d7cba2ef3288b4ac2c9775f44b99.js?body=1" for 127.0.0.1 at 2018-12-17 22:26:34 -0600
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:26:43 -0600
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[35mBlog Load (1.2ms)[0m  SELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[36mBlog Load (1.1ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[35mBlog Load (1.3ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (35.2ms)[0m  [1mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?[0m  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM "users"
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mUser Load (8.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered blogs/_user.html.erb (202.9ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mBlog Load (1.2ms)[0m  SELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (20.3ms)[0m  [1mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/_blog.html.erb (24.0ms)
+  Rendered blogs/_date.html.erb (0.1ms)
+  Rendered blogs/show.html.erb within layouts/application (269.9ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[35mBlog Load (0.9ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 323ms (Views: 248.7ms | ActiveRecord: 71.6ms)
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:27:36 -0600
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[36mBlog Load (1.1ms)[0m  [1mSELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1[0m
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[35mBlog Load (1.3ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[36mBlog Load (1.2ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (33.0ms)[0m  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mUser Load (7.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered blogs/_user.html.erb (185.5ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mBlog Load (1.1ms)[0m  [1mSELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0[0m
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (21.1ms)[0m  SELECT COUNT(*) FROM "blogs"
+  Rendered blogs/_blog.html.erb (25.0ms)
+  Rendered blogs/_date.html.erb (0.1ms)
+  Rendered blogs/show.html.erb within layouts/application (252.5ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[36mBlog Load (0.9ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 319ms (Views: 236.8ms | ActiveRecord: 69.4ms)
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:27:40 -0600
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[35mBlog Load (1.2ms)[0m  SELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[36mBlog Load (1.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[35mBlog Load (1.2ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (34.0ms)[0m  [1mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?[0m  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM "users"
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mUser Load (7.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered blogs/_user.html.erb (187.4ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mBlog Load (1.1ms)[0m  SELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (20.4ms)[0m  [1mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/_blog.html.erb (24.6ms)
+  Rendered blogs/_date.html.erb (0.1ms)
+  Rendered blogs/show.html.erb within layouts/application (253.8ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[35mBlog Load (0.9ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 304ms (Views: 232.2ms | ActiveRecord: 68.7ms)
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:27:44 -0600
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[36mBlog Load (1.1ms)[0m  [1mSELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1[0m
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[35mBlog Load (1.0ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[36mBlog Load (1.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (30.7ms)[0m  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mUser Load (7.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered blogs/_user.html.erb (177.3ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mBlog Load (1.3ms)[0m  [1mSELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0[0m
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (20.8ms)[0m  SELECT COUNT(*) FROM "blogs"
+  Rendered blogs/_blog.html.erb (24.7ms)
+  Rendered blogs/_date.html.erb (0.1ms)
+  Rendered blogs/show.html.erb within layouts/application (241.0ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[36mBlog Load (0.8ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 290ms (Views: 222.5ms | ActiveRecord: 65.6ms)
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:28:00 -0600
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[35mBlog Load (1.1ms)[0m  SELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[36mBlog Load (1.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[35mBlog Load (1.0ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (31.4ms)[0m  [1mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?[0m  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "users"
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mUser Load (7.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered blogs/_user.html.erb (187.9ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mBlog Load (1.3ms)[0m  SELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (20.0ms)[0m  [1mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/_blog.html.erb (24.3ms)
+  Rendered blogs/_date.html.erb (0.1ms)
+  Rendered blogs/show.html.erb within layouts/application (251.9ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[35mBlog Load (1.2ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 376ms (Views: 297.7ms | ActiveRecord: 66.3ms)
+
+
+Started GET "/assets/interactive.self-4aa761e65a0476797f4a3cd7c11f281d84487d10bbf2e1bf2b8e3a65c9a444b6.js?body=1" for 127.0.0.1 at 2018-12-17 22:28:00 -0600
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:28:21 -0600
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[36mBlog Load (1.1ms)[0m  [1mSELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1[0m
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[35mBlog Load (1.0ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[36mBlog Load (1.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (29.6ms)[0m  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mUser Load (7.7ms)[0m  SELECT "users".* FROM "users"
+  Rendered blogs/_user.html.erb (192.3ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mBlog Load (1.2ms)[0m  [1mSELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0[0m
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (21.3ms)[0m  SELECT COUNT(*) FROM "blogs"
+  Rendered blogs/_blog.html.erb (25.5ms)
+  Rendered blogs/_date.html.erb (0.1ms)
+  Rendered blogs/show.html.erb within layouts/application (255.2ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[36mBlog Load (0.9ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 379ms (Views: 302.0ms | ActiveRecord: 66.0ms)
+
+
+Started GET "/assets/interactive.self-d2a9159d77e45a723758140a5e9f94b99f6974a4c07a5f4dc9920ee31ed58c48.js?body=1" for 127.0.0.1 at 2018-12-17 22:28:21 -0600
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:28:33 -0600
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[35mBlog Load (1.2ms)[0m  SELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[36mBlog Load (1.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[35mBlog Load (0.9ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (29.3ms)[0m  [1mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?[0m  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (1.3ms)[0m  SELECT COUNT(*) FROM "users"
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mUser Load (6.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered blogs/_user.html.erb (185.3ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mBlog Load (1.1ms)[0m  SELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (20.6ms)[0m  [1mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/_blog.html.erb (24.4ms)
+  Rendered blogs/_date.html.erb (0.2ms)
+  Rendered blogs/show.html.erb within layouts/application (247.2ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[35mBlog Load (0.9ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 309ms (Views: 234.1ms | ActiveRecord: 63.5ms)
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:28:37 -0600
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[36mBlog Load (1.2ms)[0m  [1mSELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1[0m
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[35mBlog Load (1.2ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[36mBlog Load (1.2ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (35.2ms)[0m  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (1.5ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mUser Load (7.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered blogs/_user.html.erb (182.2ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mBlog Load (1.1ms)[0m  [1mSELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0[0m
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (20.4ms)[0m  SELECT COUNT(*) FROM "blogs"
+  Rendered blogs/_blog.html.erb (24.2ms)
+  Rendered blogs/_date.html.erb (0.1ms)
+  Rendered blogs/show.html.erb within layouts/application (249.6ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[36mBlog Load (1.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 303ms (Views: 230.1ms | ActiveRecord: 70.0ms)
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:31:35 -0600
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[35mBlog Load (1.0ms)[0m  SELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[36mBlog Load (1.3ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[35mBlog Load (1.1ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (34.5ms)[0m  [1mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?[0m  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (1.8ms)[0m  SELECT COUNT(*) FROM "users"
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mUser Load (16.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered blogs/_user.html.erb (194.5ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mBlog Load (1.3ms)[0m  SELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (21.2ms)[0m  [1mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/_blog.html.erb (25.6ms)
+  Rendered blogs/_date.html.erb (0.2ms)
+  Rendered blogs/show.html.erb within layouts/application (264.9ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[35mBlog Load (1.0ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 412ms (Views: 320.3ms | ActiveRecord: 80.6ms)
+
+
+Started GET "/assets/interactive.self-1923994e2a2684b3a365bb5701e5f0ebcaa1e9143504e7cce651c8366fad59a7.js?body=1" for 127.0.0.1 at 2018-12-17 22:31:36 -0600
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:33:34 -0600
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[36mBlog Load (2.3ms)[0m  [1mSELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1[0m
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[35mBlog Load (1.8ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[36mBlog Load (1.7ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (32.4ms)[0m  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (2.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mUser Load (15.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered blogs/_user.html.erb (225.2ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mBlog Load (2.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0[0m
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (20.2ms)[0m  SELECT COUNT(*) FROM "blogs"
+  Rendered blogs/_blog.html.erb (25.3ms)
+  Rendered blogs/_date.html.erb (0.1ms)
+  Rendered blogs/show.html.erb within layouts/application (293.3ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[36mBlog Load (1.5ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 442ms (Views: 329.9ms | ActiveRecord: 80.8ms)
+
+
+Started GET "/assets/interactive.self-05c377a820bc1d2b998f57ce4d363810647770214b54d4410f7e1091431bd20c.js?body=1" for 127.0.0.1 at 2018-12-17 22:33:34 -0600
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:34:13 -0600
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[35mBlog Load (1.2ms)[0m  SELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[36mBlog Load (1.1ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[35mBlog Load (0.9ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (33.0ms)[0m  [1mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?[0m  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (1.7ms)[0m  SELECT COUNT(*) FROM "users"
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mUser Load (9.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered blogs/_user.html.erb (203.3ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mBlog Load (1.2ms)[0m  SELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (22.0ms)[0m  [1mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/_blog.html.erb (26.2ms)
+  Rendered blogs/_date.html.erb (0.1ms)
+  Rendered blogs/show.html.erb within layouts/application (272.0ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[35mBlog Load (0.9ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 395ms (Views: 310.3ms | ActiveRecord: 72.2ms)
+
+
+Started GET "/assets/interactive.self-4b46446e590f240574299b3509ffed6c4ad1bd1dda4974ab290538cc1c5a254a.js?body=1" for 127.0.0.1 at 2018-12-17 22:34:14 -0600
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:34:52 -0600
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[36mBlog Load (1.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1[0m
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[35mBlog Load (0.9ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[36mBlog Load (1.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (26.9ms)[0m  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mUser Load (7.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered blogs/_user.html.erb (180.5ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mBlog Load (1.4ms)[0m  [1mSELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0[0m
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (21.4ms)[0m  SELECT COUNT(*) FROM "blogs"
+  Rendered blogs/_blog.html.erb (26.6ms)
+  Rendered blogs/_date.html.erb (0.1ms)
+  Rendered blogs/show.html.erb within layouts/application (242.4ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[36mBlog Load (0.9ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 364ms (Views: 290.1ms | ActiveRecord: 63.4ms)
+
+
+Started GET "/assets/interactive.self-f6bd8163a29f04e988f62c012102f19d0169bfd1a2a2073f07972e272b93f820.js?body=1" for 127.0.0.1 at 2018-12-17 22:34:53 -0600
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:37:08 -0600
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[35mBlog Load (1.0ms)[0m  SELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[36mBlog Load (0.9ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[35mBlog Load (0.9ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (27.9ms)[0m  [1mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?[0m  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (1.5ms)[0m  SELECT COUNT(*) FROM "users"
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mUser Load (8.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered blogs/_user.html.erb (180.9ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mBlog Load (1.2ms)[0m  SELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (20.7ms)[0m  [1mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/_blog.html.erb (24.6ms)
+  Rendered blogs/_date.html.erb (0.1ms)
+  Rendered blogs/show.html.erb within layouts/application (242.3ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[35mBlog Load (1.0ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 366ms (Views: 290.5ms | ActiveRecord: 64.0ms)
+
+
+Started GET "/assets/interactive.self-100a19cfc03ebcd1db30c6f807605fe49a67bd80d832a0a977741efb3fc136db.js?body=1" for 127.0.0.1 at 2018-12-17 22:37:08 -0600
+
+
+Started GET "/assets/test.self-afe45bf59114339934e5933e91ef14c0b85899d93a875de51e00ae31870bb4ae.js?body=1" for 127.0.0.1 at 2018-12-17 22:37:08 -0600
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-17 22:38:35 -0600
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[36mBlog Load (1.2ms)[0m  [1mSELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1[0m
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[35mBlog Load (1.0ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[36mBlog Load (1.0ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (28.4ms)[0m  SELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (1.6ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mUser Load (7.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered blogs/_user.html.erb (184.8ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mBlog Load (1.3ms)[0m  [1mSELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0[0m
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (21.6ms)[0m  SELECT COUNT(*) FROM "blogs"
+  Rendered blogs/_blog.html.erb (25.7ms)
+  Rendered blogs/_date.html.erb (0.1ms)
+  Rendered blogs/show.html.erb within layouts/application (247.5ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[36mBlog Load (0.9ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 374ms (Views: 296.2ms | ActiveRecord: 65.2ms)
+
+
+Started GET "/assets/interactive.self-8c79c08bec4b6e489ef03b64e7217c3c1788570d53a082723bfac26a6c528a19.js?body=1" for 127.0.0.1 at 2018-12-17 22:38:35 -0600
+
+
+Started GET "/blogs/show?id=1" for 127.0.0.1 at 2018-12-18 00:02:54 -0600
+[HotLoader] starting WS server (ws://0.0.0.0:8082)
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"show"}
+  Query Trace > app/controllers/blogs_controller.rb:40:in `show'
+  [1m[35mBlog Load (1.9ms)[0m  SELECT  "blogs".* FROM "blogs"  ORDER BY "blogs"."id" ASC LIMIT 1
+  Query Trace > app/controllers/blogs_controller.rb:42:in `show'
+  [1m[36mBlog Load (1.8ms)[0m  [1mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Query Trace > app/controllers/blogs_controller.rb:43:in `show'
+  [1m[35mBlog Load (1.8ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+  Query Trace > app/views/blogs/show.html.erb:4:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (42.7ms)[0m  [1mSELECT COUNT(*) FROM "blogs" WHERE "blogs"."category" = ?[0m  [["category", "admin"]]
+  Query Trace > app/views/blogs/show.html.erb:5:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35m (1.9ms)[0m  SELECT COUNT(*) FROM "users"
+  Query Trace > app/views/blogs/_user.html.erb:3:in `_app_views_blogs__user_html_erb__547141708874273659_70306672591720'
+     from app/views/blogs/show.html.erb:9:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36mUser Load (10.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered blogs/_user.html.erb (212.4ms)
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[35mBlog Load (1.7ms)[0m  SELECT  "blogs".* FROM "blogs" LIMIT 5 OFFSET 0
+  Query Trace > app/views/blogs/_blog.html.erb:5:in `_app_views_blogs__blog_html_erb__1327647473802114454_70306685402560'
+     from app/views/blogs/show.html.erb:12:in `_app_views_blogs_show_html_erb___3786680081632609985_70306613804600'
+     from app/controllers/blogs_controller.rb:44:in `show'
+  [1m[36m (22.2ms)[0m  [1mSELECT COUNT(*) FROM "blogs"[0m
+  Rendered blogs/_blog.html.erb (28.6ms)
+  Rendered blogs/_date.html.erb (0.2ms)
+  Rendered blogs/show.html.erb within layouts/application (304.0ms)
+  Query Trace > app/controllers/blogs_controller.rb:45:in `show'
+  [1m[35mBlog Load (1.0ms)[0m  SELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 602ms (Views: 405.5ms | ActiveRecord: 87.3ms)
+
+
+Started GET "/assets/interactive.self-b31a7d57b904565ee22e9e6f1927ec2e49715897638d1504da240faac8029abe.js?body=1" for 127.0.0.1 at 2018-12-18 00:02:55 -0600

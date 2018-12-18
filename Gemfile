@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.5'
+gem 'rails', '4.2.8'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -53,7 +53,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'railties'
-gem "deface", "~> 1.0"
+#gem "deface", "~> 1.0"
 gem 'responders', '~> 2.0' 
 gem 'render_async', '~> 1.2.0'
 gem 'react-rails-hot-loader'

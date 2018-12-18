@@ -2,7 +2,7 @@
  jQuery(function($) {
   var choices = [], cost_w = [], cost_r=[];
   cost_w = [["span#blog-num", 52.9], ["span#user-num", 2.3], ["p#insert16", 8.2], ["p#insert18", 8.2], ["p#insert20", 8.2], ["p#insert22", 8.2], ["p#insert6", 28.9], ["p#insert8", 28.9], ["p#insert10", 28.9]]
-  cost_r = [["span#blog-num", 1], ["span#user-num", 1], ["p#insert16", 10], ["p#insert18", 10], ["p#insert20", 10], ["p#insert22", 10], ["p#insert6", 2], ["p#insert8", 2], ["p#insert10", 2], ["div#blogs", 2]]
+  cost_r = [["span#blog-num", 1], ["span#user-num", 2], ["p#insert16", 10], ["p#insert18", 10], ["p#insert20", 10], ["p#insert22", 10], ["p#insert6", 2], ["p#insert8", 2], ["p#insert10", 2], ["div#blogs", 2]]
   var c, colorScale, color_scale, colors, cost, i, j, len, results1, time;
   array_unique = function(a) {
     var j, key, output, ref, results1, value;
@@ -84,7 +84,7 @@
           id = c[0];
           t = c[1];
           color = color_scale[c[1]];
-  		$(id).css("background-color", color);
+      $(id).css("background-color", color);
         })(c));
       }
       color_bar(time.length)
@@ -94,10 +94,12 @@
         c = cost[j];
         var color, id, t;
         id = c[0];
+
         $(id).css("background-color", 'transparent');
       }
     }
-    render(cost_w)
+    //render(cost_w)
+    render(cost_r)
     $(btn).on('click', function() {
       $(btn).addClass("btn btn-primary popover-submit")
       $(btn2).removeClass("btn btn-primary popover-submit")
@@ -111,13 +113,14 @@
   		render(cost_r)
   	});
 
+    choices = [["div#users", ["paginate"]]]
     // return results1;
     results2 = [];
-    send_request = function(requst){
+    send_request = function(request){
     	$.ajax({
 	        url : "/requests/request_handle",
 	        type : "post",
-	        data : { data_value: requst }
+	        data : { data_value: request }
 	    });
     };
     for (j = 0, len = choices.length; j < len; j++) {
